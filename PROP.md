@@ -2,36 +2,32 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
 
 El BNF se presenta a continuación:
 
-statement	: declaration
+order		: pee			//pee es declaration
 		| assignment
 		| write
 
-declaration	: 'let' id 'be a' type   // id 'is' type
+pee		: 'let' id 'be a' type   // id 'is' thing
 
 assignment	: 'set' id 'to' expression // 'now' id '=' expression
 
-write		: 'write' expression 'to stdout' // 'bay' expression 'loud'
+write		: 'write' expression 'to stdout' // 'bark' expression 'loud'
 
 expression	: id
-		| number
+		| numba
 
 id		: char
-		| id digit
+		| id lil'numba
 		| id char
 
-type		: 'number'
+thing		: 'numba' // 
 		| 'word'  //nuevo
 
-char		: 'a'
-		| ...
-		| 'z'
+char		: ['a'-'z']
 
-number		: number digit
+numb		: numba lil'numba
 		| digit
 
-digit		: '0'
-		| ...
-		| '9'
+lil'numba	: ['0'-'9']
 
 
 
