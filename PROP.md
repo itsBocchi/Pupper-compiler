@@ -2,61 +2,57 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
 
 El BNF se presenta a continuación:
 
-order		: declaration
-		| assignment
-		| write
+<Program> ::= 'hey pupper' <nl><Statements>'PlayDeadForReal'
 
-declaration	: 'let' id 'be a' type   // id 'is' thing
-
-<Program> ::= 'hey pupper' <nl> <gudboi?><nl><Statements> 'gud boi!'
-
-<Statements>    ::= <Statements>::= <Statement><nl><gudboi?><nl><Statements>
+<Statements>::= <nl><gudboi?><Statement><nl><Statements>
+            |!Empty
 
 <Statement>    ::= <Read>  //entrada
             | <Bark>                //salida
-            | <PlayDeadForReal>         
             | <PlayDead>
             | <Conditional>
             | <RollOver>
-            | <Stop!>
             
-<gudboi?>   ::= badboi
-        |guuuudboi
-        
-<Bark>        ::= 'Bork!'
-    | 'Bark!'
-    | 'Woof!'
-    | 'imma real pupper i swear! guau guau'
-    
-<Read> ::= 'GIMMEH' <ReadOp> Identifier
+<gudboi?>   ::= 'badboi'
+            |'gudboi!'
             
-<nl>         ::= '\n' <nl>
+<PlayDeadForReal>
+
+<Bark>      ::= 'Bork!'
+            | 'Bark!'
+            | 'Woof!'
+            | 'imma real pupper i swear! guau guau'
+            
+<nl>        ::= '\n' <nl>
             | '\n'
-<PlayDead> ::= 'Play Dead'
-assignment	: 'set' id 'to' expression // 'now' id '=' expression
+<PlayDead>  ::= 'Play Dead' (<char>|<lilnumba>)
 
-write		: 'write' expression 'to stdout' // 'bark' expression 
+<assignment>::= 'now' id '=' <expression>
 
-expression	: id
-		| numba
-		| word
+<declaration>::= id 'is' <type>
 
-id		: char
-		| id lil'numba
-		| id char
+<write>   ::= 'bark' <expression>
 
-thing		: 'numba' // 
-		| 'word'  //nuevo
+<expression>	: id
+		| <numba>
+		| <word>
 
-word ::= char
-        |charword
+id	   ::= <char>
+		| id <lilnumba>
+		| id <char>
 
-char		: ['a'-'z']
+<type> ::= <numba>
+		| <word>
 
-numb		: numba lil'numba
-		| digit
+<word> ::= <char>
+        |<char> <word>
 
-lil'numba	: ['0'-'9']
+<char> ::= ['a'-'z']
+
+<numba> ::= <numba> <lilnumba>
+		| <lilnumba>
+
+<lilnumba>	::= ['0'-'9']
 
 
 
