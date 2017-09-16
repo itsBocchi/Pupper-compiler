@@ -32,7 +32,7 @@ declaration	: 'let' id 'be a' type   // id 'is' thing
             
 <nl>         ::= '\n' <nl>
             | '\n'
-
+<PlayDead> ::= 'Play Dead'
 assignment	: 'set' id 'to' expression // 'now' id '=' expression
 
 write		: 'write' expression 'to stdout' // 'bark' expression 
