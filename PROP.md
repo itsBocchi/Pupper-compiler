@@ -31,7 +31,6 @@ El BNF se presenta a continuación:
 <RollOver>      ::= 'Roll Over!'<nl><statement>|<nl><statement>|<nl>'again'|<nl>'gboi'
 
 <assignment>    ::= 'now' <id> '=' <expression>
-                | 'now' <id> '=' <id>
 
 <declaration>   ::= <id> 'is' <type>
 
