@@ -26,7 +26,7 @@ El BNF se presenta a continuación:
 <nl>        ::= '\n' <nl>
             | '\n'
             
-<PlayDead>  ::= 'Play Dead' (char|lilnumba)*
+<PlayDead>  ::= 'Play Dead' (<char>|<lilnumba>)*
 
 <assignment>::= 'now' <id> '=' <expression>
             | 'now' <id> '=' <id>
