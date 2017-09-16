@@ -2,7 +2,7 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
 
 El BNF se presenta a continuación:
 
-<Program> ::= 'hey pupper' <nl><Statements>'PlayDead4Real'
+<Program> ::= 'hey pupper' <nl><Statements>'PlayDeadForReal'
 
 <Statements>::= <nl><gudboi?><Statement><nl><Statements>
             |!Empty
@@ -16,7 +16,7 @@ El BNF se presenta a continuación:
 <gudboi?>   ::= 'badboi'
             |'gudboi!'
             
-<PlayDeadForReal>
+<PlayDead4Real> ::='Play Dead gud doggo'
 
 <Bark>      ::= 'Bork!'
             | 'Bark!'
@@ -25,21 +25,21 @@ El BNF se presenta a continuación:
             
 <nl>        ::= '\n' <nl>
             | '\n'
-<PlayDead>  ::= 'Play Dead' (<char>|<lilnumba>)
+<PlayDead>  ::= 'Play Dead' <>
 
-<assignment>::= 'now' <id> '=' <expression>
+<assignment>::= 'now' id '=' <expression>
 
-<declaration>::= <id> 'is' <type>
+<declaration>::= id 'is' <type>
 
 <write>   ::= 'bark' <expression>
 
-<expression>	: <id>
+<expression>	: id
 		| <numba>
 		| <word>
 
-<id>	   ::= <char>
-		| <id> <lilnumba>
-		| <id> <char>
+id	   ::= <char>
+		| id <lilnumba>
+		| id <char>
 
 <type> ::= <numba>
 		| <word>
