@@ -8,7 +8,7 @@ order		: declaration
 
 declaration	: 'let' id 'be a' type   // id 'is' thing
 
-<Program> ::= 'hey pupper' <nl> <><Statements> 'gud boi!'
+<Program> ::= 'hey pupper' <nl> <gudboi?><nl><Statements> 'gud boi!'
 
 <Statements>    ::= <Statements>::= <Statement><nl><gudboi?><nl><Statements>
 
