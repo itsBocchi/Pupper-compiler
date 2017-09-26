@@ -1,4 +1,4 @@
-La orientación de nuestro proyecto consiste en un enfoque amigable para un lenguaje de programación, que al ser usado simula una interacción con un perro/mascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, renombrarlas o asignarles valor).
+La orientación de nuestro proyecto consiste en un enfoque amigable para un lenguaje de programación, que al ser usado simula una interacción con un perro/mascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, renombrarlas o asignarles valor). La idea no es que sea facil de codificar.
 
 El BNF se presenta a continuación:
 
