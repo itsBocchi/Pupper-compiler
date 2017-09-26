@@ -15,14 +15,15 @@ El BNF se presenta a continuación:
                 | <RollOver>
 	        	| <assignment>
 	        	| <declaration>
-	        	| <Statements>  //"relleno" (abre paso para llenar el programa) 
+	        	| <Statements>          //"relleno" (abre paso para llenar el programa) 
             
 <gudboi?>       ::= 'badboi'
                 |'gudboi!'
+                |'nice dogger'
             
-<PlayDead4Real> ::='Play Dead gud doggo' //elemento terminal para finalizar el programa
+<PlayDead4Real> ::='Play Dead gud doggo'//elemento terminal para finalizar el programa
 
-<Bark>          ::= <id>  //id para imprimir el valor de una variable
+<Bark>          ::= <id>                //id para imprimir el valor de una variable
 	        	| <word>
 	        	| <numba>
 	        	|'Bork!'<s><Bark>
@@ -38,7 +39,7 @@ El BNF se presenta a continuación:
             
 <PlayDead>      ::= 'Play Dead' (<char>|<lilnumba>)*  //elemento no terminal para "pausar el programa"
 
-<RollOver>      ::= 'Roll Over!'<nl><statement>|<nl><statement>|<nl>'again'|<nl>'gboi'
+<RollOver>      ::= 'Roll Over!' [<nl><statement>] {[<nl>'again']} <nl>'gboi'
 
 <declaration>   ::= <id> 'is' <type>
 
@@ -52,7 +53,7 @@ El BNF se presenta a continuación:
 
 <id>            ::= <char>          //nombres de variables
 	        	| <id> <lilnumba>
-	        	| <id> <char>		//tambien s epodia emplera directamente <word> 
+	        	| <id> <char>		//tambien se podia emplear directamente <word> 
 
 <type>          ::= 'numba'
 	        	| 'word'
