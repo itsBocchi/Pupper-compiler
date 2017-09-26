@@ -2,6 +2,7 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
 
 El BNF se presenta a continuación:
 
+```
 \<Program\>       ::= 'hey pupper' \<nl\>\<Statements\>\<PlayDead4Real\>
 
 \<Statements\>    ::= \<nl\>\<gudboi?\>\<Statement\>\<nl\>\<Statements\>
@@ -12,9 +13,9 @@ El BNF se presenta a continuación:
                 | \<PlayDead\>
                 | \<Conditional\>
                 | \<RollOver\>
-		| \<assignment\>
-		| \<declaration\>
-		| \<Statements\>  //"relleno" (abre paso para llenar el programa) 
+	        	| \<assignment\>
+	        	| \<declaration\>
+	        	| \<Statements\>  //"relleno" (abre paso para llenar el programa) 
             
 \<gudboi?\>       ::= 'badboi'
                 |'gudboi!'
@@ -22,9 +23,9 @@ El BNF se presenta a continuación:
 \<PlayDead4Real\> ::='Play Dead gud doggo' //elemento terminal para finalizar el programa
 
 \<Bark\>          ::= \<id\>  //id para imprimir el valor de una variable
-		| \<word\>
-		| \<numba\>
-		|'Bork!'\<s\>\<Bark\>
+	        	| \<word\>
+	        	| \<numba\>
+	        	|'Bork!'\<s\>\<Bark\>
                 | 'Bark!'\<s\>\<Bark\>
                 | 'Woof!'\<s\>\<Bark\>
                 | 'imma real pupper i swear! guau guau'\<s\>\<Bark\>
@@ -46,15 +47,15 @@ El BNF se presenta a continuación:
 \<write\>         ::= 'bark' \<expression\>
 
 \<expression\>    ::= \<id\>        //valores de las variables
-		| \<numba\>
-		| \<word\>
+	        	| \<numba\>
+	        	| \<word\>
 
 \<id\>            ::= \<char\>          //nombres de variables
-		| \<id\> \<lilnumba\>
-		| \<id\> \<char\>		//tambien s epodia emplera directamente \<word\> 
+	        	| \<id\> \<lilnumba\>
+	        	| \<id\> \<char\>		//tambien s epodia emplera directamente \<word\> 
 
 \<type\>          ::= 'numba'
-		| 'word'
+	        	| 'word'
 
 \<word\>          ::= \<char\>
                 |\<word\>\<char\>
@@ -62,10 +63,10 @@ El BNF se presenta a continuación:
 \<char\>          ::= ['a'-'z']
 
 \<numba\>         ::= \<numba\>\<lilnumba\>
-		| \<lilnumba\>
+	        	| \<lilnumba\>
 
 \<lilnumba\>	    ::= ['0'-'9']
-
+```
 
 		Ejemplos:
 
@@ -84,6 +85,7 @@ La derivación para that is numba :
 	\<char\>'h''a''t' 'is' 'numba'
 	't''h''a''t' 'is' 'numba'
 	'that' 'is' 'numba'
+
 
 La derivación para now t = 23 :
 	\<Statement\>
