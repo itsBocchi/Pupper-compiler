@@ -8,29 +8,44 @@ El BNF se presenta a continuación:
                 | !Empty
 
 \<Statement\>	::= \<Read\>  //entrada
+
                 | \<Bark\>                //salida (mostrar por consola)
+
                 | \<PlayDead\>
+
                 | \<Conditional\>
+
                 | \<RollOver\>
-		| \<assignment\>
-		| \<declaration\>
-		| \<Statements\>  //"relleno" (abre paso para llenar el programa) 
+
+	        	| \<assignment\>
+
+	        	| \<declaration\>
+
+	        	| \<Statements\>  //"relleno" (abre paso para llenar el programa) 
             
 \<gudboi?\>       ::= 'badboi'
+                    
                 |'gudboi!'
             
 \<PlayDead4Real\> ::='Play Dead gud doggo' //elemento terminal para finalizar el programa
 
 \<Bark\>          ::= \<id\>  //id para imprimir el valor de una variable
-		| \<word\>
-		| \<numba\>
-		|'Bork!'\<s\>\<Bark\>
+	        	
+	        	| \<word\>
+	        	
+	        	| \<numba\>
+	        	
+	        	|'Bork!'\<s\>\<Bark\>
+                
                 | 'Bark!'\<s\>\<Bark\>
+                
                 | 'Woof!'\<s\>\<Bark\>
+                
                 | 'imma real pupper i swear! guau guau'\<s\>\<Bark\>
 
             
 \<nl\>            ::= '\n' \<nl\>
+                
                 | '\n'
 
 \<s\>		::= ' '
@@ -46,23 +61,30 @@ El BNF se presenta a continuación:
 \<write\>         ::= 'bark' \<expression\>
 
 \<expression\>    ::= \<id\>        //valores de las variables
-		| \<numba\>
-		| \<word\>
+		        
+		        | \<numba\>
+	        	
+	        	| \<word\>
 
 \<id\>            ::= \<char\>          //nombres de variables
-		| \<id\> \<lilnumba\>
-		| \<id\> \<char\>		//tambien s epodia emplera directamente \<word\> 
+	        	
+	        	| \<id\> \<lilnumba\>
+	        	
+	        	| \<id\> \<char\>		//tambien s epodia emplera directamente \<word\> 
 
 \<type\>          ::= 'numba'
-		| 'word'
+	        
+	        	| 'word'
 
 \<word\>          ::= \<char\>
+                
                 |\<word\>\<char\>
 
 \<char\>          ::= ['a'-'z']
 
 \<numba\>         ::= \<numba\>\<lilnumba\>
-		| \<lilnumba\>
+	        	
+	        	| \<lilnumba\>
 
 \<lilnumba\>	    ::= ['0'-'9']
 
