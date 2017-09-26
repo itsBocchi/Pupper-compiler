@@ -3,7 +3,7 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
 El BNF se presenta a continuación:
 
 ```
-<Program>       ::= 'hey pupper' <nl><Statements><PlayDead4Real>
+<Program>       ::= 'hey pupper' [<nl><Statements>] <PlayDead4Real>
 
 <Statements>    ::= <nl><gudboi?><Statement><nl><Statements>
                 | !Empty
