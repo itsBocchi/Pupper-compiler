@@ -1,7 +1,7 @@
 La orientación de nuestro proyecto consiste en un enfoque amigable para un lenguaje de programación, que al ser usado simula una interacción con un perro/mascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, renombrarlas o asignarles valor).
 
 ### BNF
-
+´´´
 <Program>       ::= 'hey pupper' [<nl><Statements>] <PlayDead4Real>
 
 <Statements>    ::= <nl><gudboi?><Statement><nl><Statements>
@@ -67,7 +67,7 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
 	        	| <lilnumba>
 
 <lilnumba>	    ::= ['0'-'9']
-
+´´´
 ### Ejemplo:
 
 Input
