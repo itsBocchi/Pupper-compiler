@@ -15,20 +15,14 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
 	        	| <assignment>
 	        	| <declaration>
 	        	| <Statements>          //"relleno" (abre paso para llenar el programa) 
+	        	
             
-<gudboi?>       ::= 'badboi'
-                |'gudboi!'
-                |'nice dogger'
-            
-<PlayDead4Real> ::='play dead gud doggo'//elemento terminal para finalizar el programa
+<PlayDead4Real> ::='stay safe gud doggo'//elemento terminal para finalizar el programa
 
-<Bark>          ::= <id>                //id para imprimir el valor de una variable
-	        	| <wurd>
-	        	| <numba>
-	        	|'Bork!'<s><Bark>
-                | 'Bark!'<s><Bark>
-                | 'Woof!'<s><Bark>
-                | 'imma real pupper i swear! guau guau'<s><Bark>
+<Bark>          ::= 'Bork! ' <expression>
+                | 'Bark! ' <expression>
+                | 'Woof! ' <expression>
+                | 'imma real pupper i swear! guau guau ' <expression>
 
             
 <nl>            ::= '\n' <nl>
