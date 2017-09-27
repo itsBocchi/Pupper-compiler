@@ -1,10 +1,10 @@
-La orientación de nuestro proyecto consiste en la implementacion de un lenguaje amigable, que al ser usado simula una interacción con un perro/mascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, renombrarlas o asignarles valor).
+La orientación de nuestro proyecto consiste en la implementación de un lenguaje amigable, el cual simula la interacción con un perro/mascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, asignarles valor o incluso "hacer trucos con estas" ). Intentamos crear un lenguaje esoterico, de interés no sólo para usuarios experimentados sino también para aquellos que comienzan a adentrarse al mundo de la programación. Su principal ventaja será el tamaño del transpiler.
 
 ### EBNF
 ```
 <Program>       ::= 'hey pupper' [<nl><Statements>] <PlayDead4Real>
 
-<Statements>    ::= <nl><gudboi?><Statement><nl><Statements>
+<Statements>    ::= <nl><Statement><nl><Statements>
                 | !Empty
 
 <Statement>	::= <Read>  //entrada
@@ -63,9 +63,9 @@ La orientación de nuestro proyecto consiste en la implementacion de un lenguaje
 <lilnumba>	    ::= ['0'-'9']
 ```
 ### Ejemplo:
-```
-Input
 
+Input
+```
 hey pupper
 x is numba
 now x = 4
@@ -78,8 +78,8 @@ get together w and x as newwurd
 get together newwurd and anotherwurd as newwurd
 bark newwurd
 play dead gud doggo
-
+```
 Output
-
+```
 >>>great things come to you but only if you say "be safe good doggo 4 times"
 ```
