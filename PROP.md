@@ -1,6 +1,6 @@
-La orientación de nuestro proyecto consiste en un enfoque amigable para un lenguaje de programación, que al ser usado simula una interacción con un perro/mascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, renombrarlas o asignarles valor).
+La orientación de nuestro proyecto consiste en la implementacion de un lenguaje amigable, que al ser usado simula una interacción con un perro/mascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, renombrarlas o asignarles valor).
 
-### BNF
+### EBNF
 ```
 <Program>       ::= 'hey pupper' [<nl><Statements>] <PlayDead4Real>
 
