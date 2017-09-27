@@ -20,7 +20,7 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
                 |'gudboi!'
                 |'nice dogger'
             
-<PlayDead4Real> ::='Play Dead gud doggo'//elemento terminal para finalizar el programa
+<PlayDead4Real> ::='play dead gud doggo'//elemento terminal para finalizar el programa
 
 <Bark>          ::= <id>                //id para imprimir el valor de una variable
 	        	| <wurd>
@@ -36,9 +36,9 @@ La orientación de nuestro proyecto consiste en un enfoque amigable para un leng
 
 <s>		::= ' '
             
-<PlayDead>      ::= 'Play Dead' (<char>|<lilnumba>)*  //elemento no terminal para "pausar el programa"
+<PlayDead>      ::= 'play dead' (<char>|<lilnumba>)*  //elemento no terminal para "pausar el programa"
 
-<RollOver>      ::= 'Roll Over!' [<nl><statement>] {[<nl>'again']} <nl>'gboi'
+<RollOver>      ::= 'roll over!' [<nl><statement>] {[<nl>'again']} <nl>'gboi'
 
 <declaration>   ::= <id> 'is' <type>
 
@@ -83,7 +83,7 @@ now w is great things come to you but only if you say be safe good doggo
 get together w and x as newwurd
 get together newwurd and anotherwurd as newwurd
 bark newwurd
-
+play dead gud doggo
 
 Output
 
