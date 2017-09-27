@@ -63,7 +63,7 @@ La orientación de nuestro proyecto consiste en la implementacion de un lenguaje
 <lilnumba>	    ::= ['0'-'9']
 ```
 ### Ejemplo:
-
+```
 Input
 
 hey pupper
@@ -82,3 +82,4 @@ play dead gud doggo
 Output
 
 great things come to you but only if you say "be safe good doggo 4 times"
+```
