@@ -8,8 +8,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
                 | !Empty
 
 /<Statement/>	::= /<Read/>  //entrada
-                | /<Bark/>                //salida (mostrar por consola)
-                | /<PlayDead/>
+                | /<Bark/>                //salida
                 | /<Conditional/>
                 | /<RollOver/>
 	        	| /<assignment/>
@@ -24,13 +23,6 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
                 | 'Woof! ' /<expression/>
                 | 'imma real pupper i swear! guau guau ' /<expression/>
 
-            
-/<nl/>            ::= '\n' /<nl/>
-                | '\n'
-
-/<s/>		::= ' '
-            
-/<PlayDead/>      ::= 'play dead' (/<char/>|/<lilnumba/>)*  //elemento no terminal para "pausar el programa"
 
 /<RollOver/>      ::= 'roll over!' [/<nl/>/<statement/>] {[/<nl/>'again']} /<nl/>'gboi'
 
@@ -39,8 +31,6 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 /<assignment/>    ::= 'now' /<id/> '=' /<expression/>
 
 /<add/>			::= 'get together ' /<id/> ' and ' /<id/>|/<expression/> as /<id/>
-
-/<write/>         ::= 'bark' /<expression/>
 
 /<expression/>    ::= /<id/>        //valores de las variables
 	        	| /<numba/>
