@@ -2,10 +2,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 ### EBNF
 ```
-/<Program/>       ::= 'hey pupper' [/<nl/>/<Statements/>] /<PlayDead4Real/>
-
-/<Statements/>    ::= /<nl/>/<Statement/>/<nl/>/<Statements/>
-                | !Empty
+/<Program/>       ::= 'hey pupper' [/<nl/>/<Statement/>] /<PlayDead4Real/>
 
 /<Statement/>	::= /<Read/>  //entrada
                 | /<Bark/>                //salida
@@ -13,10 +10,12 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
                 | /<RollOver/>
 	        	| /<assignment/>
 	        	| /<declaration/>
-	        	| /<Statements/>          //"relleno" (abre paso para llenar el programa) 
+	        	| /<Statement/>          //"relleno" (abre paso para llenar el programa) 
 	        	
             
 /<PlayDead4Real/> ::='stay safe gud doggo'//elemento terminal para finalizar el programa
+
+/<Conditional/>   ::= 'Come here boi' /<statement/>     //if, permite 1 statement, random int 0-1, de ser 1 ejecuta solo la siguiente linea
 
 /<Bark/>          ::= 'Bork! ' /<expression/>
                 | 'Bark! ' /<expression/>
@@ -30,7 +29,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 /<assignment/>    ::= 'now' /<id/> '=' /<expression/>
 
-/<add/>			::= 'get together ' /<id/> ' and ' /<id/>|/<expression/> as /<id/>
+/<add/>			::= 'get together ' /<id/> ' and ' /<id/>|/<expression/> as /<id/>      //suma expresiones o id. tambien concatena wurd, wurd con numba son compatibles
 
 /<expression/>    ::= /<id/>        //valores de las variables
 	        	| /<numba/>
