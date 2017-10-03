@@ -28,7 +28,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 /<assignment/>    ::= 'now' /<id/> '=' /<expression/>
 
-/<add/>             ::= 'get together ' /<id/> ' and ' /<id/>|/<expression/> as /<id/>      //suma expresiones o id. tambien concatena wurd, wurd con numba son compatibles
+/<add/>             ::= 'get together ' /<id/> ' and ' /<id/>|/<expression/> as /<id/>      //suma expresiones o id. tambien concatena wurd, wurd con numba son compatibles (se le asigna valor al ultimo id)
 
 /<expression/>    ::= /<id/>        //valores de las variables
 	        	| /<numba/>
