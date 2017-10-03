@@ -2,14 +2,14 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 ### EBNF
 ```
-/<Program/>       ::= 'hey pupper' [/<Statement/>] /<PlayDead4Real/>
+/<Program/>       ::= 'hey pupper' {[/<Statement/>]} /<PlayDead4Real/>
 
 /<Statement/>	::=  /<Bark/>                //salida
                 | /<Conditional/>
                 | /<RollOver/>
 	        	| /<assignment/>
 	        	| /<declaration/>
-	        	| /<Statement/>          //"relleno" (abre paso para llenar el programa) 
+	        	          //"relleno" (abre paso para llenar el programa) 
 	        	
             
 /<PlayDead4Real/> ::='stay safe gud doggo'//elemento terminal para finalizar el programa
