@@ -39,17 +39,13 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 	        	| /<id/> /<lilnumba/>
 	        	| /<id/> /<char/>		//tambien se podia emplear directamente /<wurd/> 
 
-/<type/>          ::= 'numba'
+/<type/>          ::= 'numba'           //al nombrar tipos, puede ser <numba>
 	        	| 'wurd'
 
-/<wurd/>          ::= [/<wurd/>]/<char/>
+/<wurd/>          ::= {Letter}
 
-/<char/>          ::= ['a'-'z']|/<s/>
+/<numba/>         ::= {Alphanumeric}
 
-/<numba/>         ::= /<numba/>/<lilnumba/>
-	        	| /<lilnumba/>
-
-/<lilnumba/>	    ::= ['0'-'9']
 ```
 ### Ejemplo:
 
