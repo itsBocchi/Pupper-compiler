@@ -2,7 +2,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 ### EBNF
 ```
-/<Program/>       ::= 'hey pupper' [/<nl/>/<Statement/>] /<PlayDead4Real/>
+/<Program/>       ::= 'hey pupper' [/<Statement/>] /<PlayDead4Real/>
 
 /<Statement/>	::= /<Read/>  //entrada
                 | /<Bark/>                //salida
@@ -23,7 +23,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
                 | 'imma real pupper i swear! guau guau ' /<expression/>
 
 
-/<RollOver/>      ::= 'roll over!' [/<nl/>/<statement/>] {[/<nl/>'again']} /<nl/>'gboi'
+/<RollOver/>      ::= 'roll over!' [/<statement/>] {['again']} 'gboi'
 
 /<declaration/>   ::= /<id/> 'is' /<type/>
 
