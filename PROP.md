@@ -2,17 +2,19 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 ### EBNF
 ```
-/<Program/>       ::= 'hey pupper' {[/<Statement/>]} /<PlayDead4Real/>
+"Start Symbol" = /<Start/>
+
+/<Start/>       ::= /<Structure/> 
+
+/<Structure/>   ::= 'hey pupper' {[/<Statement/>]} /<PlayDead4Real/>
 
 /<Statement/>	::=  /<Bark/>                //salida
                 | /<Conditional/>
                 | /<RollOver/>
 	        	| /<assignment/>
 	        	| /<declaration/>
-	        	          //"relleno" (abre paso para llenar el programa) 
-	        	
             
-/<PlayDead4Real/> ::='stay safe gud doggo'//elemento terminal para finalizar el programa
+/<PlayDead4Real/> ::='stay safe gud doggo'              //elemento terminal para finalizar el programa
 
 /<Conditional/>   ::= 'Come here boi' /<statement/>     //if, permite 1 statement, random int 0-1, de ser 1 ejecuta solo la siguiente linea
 
@@ -30,24 +32,22 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 /<add/>             ::= 'get together ' /<id/> ' and ' /<id/>|/<expression/> as /<id/>      //suma expresiones o id. tambien concatena wurd, wurd con numba son compatibles (se le asigna valor al ultimo id)
 
-/<expression/>    ::= /<id/>        //valores de las variables
-	        	| /<numba/>
-	        	| /<wurd/>
-	        	| /<Read/>  //entrada
+/<expression/>    ::= /<id/>
+	        	| /<Read/>
 	        	
-/<Read/>            ::= 'look at this' /<wurd/>
+/<Read/>            ::= 'look at this' /<wurd/> //entrada
                     | 'look at this' /<numba/>
 
-/<id/>            ::= /<char/>          //nombres de variables
+/<id/>            ::= /<wurd/>         //nombres de variables
 	        	| /<id/> /<lilnumba/>
 	        	| /<id/> /<char/>		//tambien se podia emplear directamente /<wurd/> 
 
-/<type/>          ::= 'numba'           //al nombrar tipos, puede ser <numba>
+/<type/>          ::= 'numba'           //usado para asignar declarar tipo de dato
 	        	| 'wurd'
 
-/<wurd/>          ::= {Letter}
+/<wurd/>          ::= {Letter}          //Cualquier caracter ascii 65 al 90 y 97 al 122, es decir A a la Z y a a la z
 
-/<numba/>         ::= {Alphanumeric}
+/<numba/>         ::= {Alphanumeric}    //Cualquier caracter ascii 48 al 57, es decir del 0 al 9
 
 ```
 ### Ejemplo:
