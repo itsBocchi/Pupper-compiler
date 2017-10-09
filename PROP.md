@@ -6,7 +6,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 <START>       ::= <STRUCTURE> 
 
-<STRUCTURE>   ::= 'hey pupper' {[<STATEMENT>]} <PlayDead4Real>
+<STRUCTURE>   ::= 'hey pupper' {[<STATEMENT>]} <PLAYDEAD>
 
 <STATEMENT>	::=  <BARK>                				#salida
                 | <CONDITIONAL>
@@ -15,7 +15,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 	        	| <ADD>
 	        	| <DECLARATION>
             
-<PlayDead4Real> ::='stay safe gud doggo'            #elemento terminal para finalizar el programa
+<PLAYDEAD> ::='stay safe gud doggo'            #elemento terminal para finalizar el programa
 
 <CONDITIONAL>   ::= 'Come here boi' <STATEMENT>     #if, permite 1 STATEMENT, random int 0-1, de ser 1 ejecuta solo la siguiente linea
 
