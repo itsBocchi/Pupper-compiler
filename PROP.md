@@ -4,11 +4,9 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 ```
 "Start Symbol" = <START>
 
-<START>       ::= <STRUCTURE> 
+<START>         ::= 'hey pupper' {[<STATEMENT>]} <PLAYDEAD>
 
-<STRUCTURE>   ::= 'hey pupper' {[<STATEMENT>]} <PLAYDEAD>
-
-<STATEMENT>	::=  <BARK>                				#salida
+<STATEMENT>     ::=  <BARK>                				#salida
                 | <CONDITIONAL>
                 | <ROLLOVER>
 	        	| <ASSIGN>
