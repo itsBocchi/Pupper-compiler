@@ -1,54 +1,54 @@
-La orientación de nuestro proyecto consiste en la implementación de un lenguaje amigable, el cual simula la interacción con un perro/mascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, asignarles valor o incluso "hacer trucos con estas" ). Intentamos crear un lenguaje esoterico, de interés no sólo para usuarios experimentados sino también para aquellos que comienzan a adentrarse al mundo de la programación. Su principal ventaja será el tamaño del transpiler.
+La orientación de nuestro proyecto consiste en la implementación de un lenguaje amigable, el cual simula la interacción con un perromascota para el usuario, a la cual le "enseñamos" cosas nuevas al trabajar con variables (crearlas, asignarles valor o incluso "hacer trucos con estas" ). Intentamos crear un lenguaje esoterico, de interés no sólo para usuarios experimentados sino también para aquellos que comienzan a adentrarse al mundo de la programación. Su principal ventaja será el tamaño del transpiler.
 
 ### EBNF
 ```
-"Start Symbol" = /<Start/>
+"Start Symbol" = <START>
 
-/<Start/>       ::= /<Structure/> 
+<START>       ::= <STRUCTURE> 
 
-/<Structure/>   ::= 'hey pupper' {[/<Statement/>]} /<PlayDead4Real/>
+<STRUCTURE>   ::= 'hey pupper' {[<STATEMENT>]} <PlayDead4Real>
 
-/<Statement/>	::=  /<Bark/>                //salida
-                | /<Conditional/>
-                | /<RollOver/>
-	        	| /<assignment/>
-	        	| /<declaration/>
+<STATEMENT>	::=  <BARK>                				#salida
+                | <CONDITIONAL>
+                | <ROLLOVER>
+	        	| <ASSIGN>
+	        	| <ADD>
+	        	| <DECLARATION>
             
-/<PlayDead4Real/> ::='stay safe gud doggo'              //elemento terminal para finalizar el programa
+<PlayDead4Real> ::='stay safe gud doggo'            #elemento terminal para finalizar el programa
 
-/<Conditional/>   ::= 'Come here boi' /<statement/>     //if, permite 1 statement, random int 0-1, de ser 1 ejecuta solo la siguiente linea
+<CONDITIONAL>   ::= 'Come here boi' <STATEMENT>     #if, permite 1 STATEMENT, random int 0-1, de ser 1 ejecuta solo la siguiente linea
 
-/<Bark/>          ::= 'Bork! ' /<expression/>
-                | 'Bark! ' /<expression/>
-                | 'Woof! ' /<expression/>
-                | 'imma real pupper i swear! guau guau ' /<expression/>
+<BARK>          ::= 'Bork! ' <EXPRESSION>
+                | 'Bark! ' <EXPRESSION>
+                | 'Woof! ' <EXPRESSION>
+                | 'imma real pupper i swear! guau guau ' <EXPRESSION>
 
 
-/<RollOver/>      ::= 'roll over!' [/<statement/>] {['again']} 'gboi'
+<ROLLOVER>      ::= 'roll over!' [<STATEMENT>] {['UPDOGO ^_^']} 'gboi'
 
-/<declaration/>   ::= /<id/> 'is' /<type/>
+<DECLARATION>   ::= <ID> 'is' <TYPE>	#Crea un ID y le asigna un tipo(TYPE)
 
-/<assignment/>    ::= 'now' /<id/> '=' /<expression/>
+<ASSIGN>    ::= 'now' <ID> '=' <EXPRESSION>
 
-/<add/>             ::= 'get together ' /<id/> ' and ' /<id/>|/<expression/> as /<id/>      //suma expresiones o id. tambien concatena wurd, wurd con numba son compatibles (se le asigna valor al ultimo id)
+<ADD>             ::= 'get together ' <ID>|<EXPRESSION> ' and ' <ID>|<EXPRESSION> as <ID>      #Concatenacion, si ambos son NUMBA 
 
-/<expression/>    ::= /<id/>
-	        	| /<Read/>
+<EXPRESSION>    ::= <ID>
+	        	| <READ>
 	        	
-/<Read/>            ::= 'look at this' /<wurd/> //entrada
-                    | 'look at this' /<numba/>
+<READ>            ::= 'fetch!' <WURD>		#READ actua como input. Recibe WURD o NUMBA
+                    | 'fetch!' <NUMBA>
 
-/<id/>            ::= /<wurd/>         //nombres de variables
-	        	| /<id/> /<lilnumba/>
-	        	| /<id/> /<char/>		//tambien se podia emplear directamente /<wurd/> 
+<ID>            ::= <WURD>         		#nombres de variables
+	        	| <ID> <NUMBA>
+	        	| <ID> <WURD>			#tambien se podia emplear directamente <WURD> 
 
-/<type/>          ::= 'numba'           //usado para asignar declarar tipo de dato
+<WURD>          ::= {Letter}          	#Cualquier caracter ascii 65 al 90 y 97 al 122, es decir A a la Z y a a la z
+
+<NUMBA>         ::= {Alphanumeric}    	#Cualquier caracter ascii 48 al 57, es decir del 0 al 9
+
+<TYPE>          ::= 'numba'           	#usado para declarar tipo de dato
 	        	| 'wurd'
-
-/<wurd/>          ::= {Letter}          //Cualquier caracter ascii 65 al 90 y 97 al 122, es decir A a la Z y a a la z
-
-/<numba/>         ::= {Alphanumeric}    //Cualquier caracter ascii 48 al 57, es decir del 0 al 9
-
 ```
 ### Ejemplo:
 
@@ -69,5 +69,5 @@ play dead gud doggo
 ```
 Output
 ```
-/>/>/>great things come to you but only if you say "be safe good doggo 4 times"
+>>>great things come to you but only if you say "be safe good doggo 4 times"
 ```
