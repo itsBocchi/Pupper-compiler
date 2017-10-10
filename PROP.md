@@ -29,8 +29,9 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 
 \<ASSIGN\>    ::= 'now' \<ID\> '=' \<EXPRESSION\>
             |'now' \<ID\> '=' \<ID\>      #para asignarle valor de otra variable
+            |'now' \<ID\> '=' \<ADD\>
 
-\<ADD\>             ::= 'get together ' \<ID\>|\<EXPRESSION\> ' and ' \<ID\>|\<EXPRESSION\> as \<ID\>      #Concatenacion, si ambos son NUMBA 
+\<ADD\>             ::= 'get together ' \<ID\>|\<EXPRESSION\> ' and ' \<ID\>|\<EXPRESSION\>      #Concatenacion, si ambos son NUMBA 
 
 \<EXPRESSION\>    ::= \<WURD\>                  #antes era \<ID\>
                 |\<NUMBA\>                      #antes era \<ID\>
@@ -62,8 +63,8 @@ newwurd is wurd
 anotherwurd is wurd
 now anotherwurd =  times
 now w is great things come to you but only if you say be safe good doggo 
-get together w and x as newwurd
-get together newwurd and anotherwurd as newwurd
+now newwurd=get together w and x
+now newwurd=get together newwurd and anotherwurd
 bark newwurd
 play dead gud doggo
 ```
