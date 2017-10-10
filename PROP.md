@@ -28,10 +28,12 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 \<DECLARATION\>   ::= \<ID\> 'is' \<TYPE\>	#Crea un ID y le asigna un tipo(TYPE)
 
 \<ASSIGN\>    ::= 'now' \<ID\> '=' \<EXPRESSION\>
+            |'now' \<ID\> '=' \<ID\>      #para asignarle valor de otra variable
 
 \<ADD\>             ::= 'get together ' \<ID\>|\<EXPRESSION\> ' and ' \<ID\>|\<EXPRESSION\> as \<ID\>      #Concatenacion, si ambos son NUMBA 
 
-\<EXPRESSION\>    ::= \<ID\>
+\<EXPRESSION\>    ::= \<WURD\>                  #antes era \<ID\>
+                |\<NUMBA\>                      #antes era \<ID\>
 	        	| \<READ\>
 	        	
 \<READ\>            ::= 'fetch!' \<WURD\>		#READ actua como input. Recibe WURD o NUMBA
