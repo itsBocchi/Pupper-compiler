@@ -60,7 +60,7 @@ w is wurd
 newwurd is wurd
 anotherwurd is wurd
 now anotherwurd =  times
-now w is great things come to you but only if you say be safe good doggo 
+now w = great things come to you but only if you say be safe good doggo 
 now newwurd=get together w and x
 now newwurd=get together newwurd and anotherwurd
 bark newwurd
