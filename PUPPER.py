@@ -14,7 +14,7 @@ t_PLUS    = r'\+'
 t_MINUS   = r'-'
 t_TIMES   = r'\*'
 t_DIVIDE  = r'/'
-t_EQUALS  = r'\=|([i][s])'
+t_EQUALS  = r'\='
 t_LPAREN  = r'\('
 t_RPAREN  = r'\)'
 t_NAME    = r'[a-zA-Z_][a-zA-Z0-9_]*'   # r'[a-zA-Z_][a-zA-Z0-9_]*\!' solucion parche a diferenciacion entre nombre de variable y wurd
@@ -106,8 +106,10 @@ def p_expression_NUMBA(t):
 
 def p_expression_wurd(t): #ARREGLAAAAR
     'expression : COM WURD COM'
+    if t[1] == '\'':
+        t[0] = '{0}\n'.format(t[2])
     print("ud esta en la funcion para wurd")
-    t[0] = t[2]
+    
 
 def p_expression_name(t):
     'expression : NAME'
@@ -131,8 +133,12 @@ if __name__ == '__main__':
             try:
                 s = input('pupper >> ')   # Use raw_input on Python 2
                 if s == "stay safe gud doggo":
+                    print("bye :p")
+                    break
+                elif s == "play dead":
+                    print("bye xp")
                     break
             except EOFError:
                 break
             parser.parse(s)
-    print("bye :p")
+    else: print("u forgot 2 say something")
