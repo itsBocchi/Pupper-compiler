@@ -4,7 +4,7 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 ```
 "Start Symbol" = \<START\>
 
-\<START\>         ::= 'hey pupper' {[\<STATEMENT\>]} \<PLAYDEAD\>
+\<START\>         ::= 'hey pupper' {[\<STATEMENT\>]} 'stay safe gud doggo' 
 
 \<STATEMENT\>     ::=  \<BARK\>                				#salida
                 | \<CONDITIONAL\>
@@ -12,8 +12,6 @@ La orientación de nuestro proyecto consiste en la implementación de un lenguaj
 	        	| \<ASSIGN\>
 	        	| \<ADD\>
 	        	| \<DECLARATION\>
-            
-\<PLAYDEAD\> ::='stay safe gud doggo'            #elemento terminal para finalizar el programa
 
 \<CONDITIONAL\>   ::= 'Come here boi' \<STATEMENT\>     #if, permite 1 STATEMENT, random int 0-1, de ser 1 ejecuta solo la siguiente linea
 
