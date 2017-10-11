@@ -2,11 +2,17 @@
 #Pupper
 # -----------------------------------------------------------------------------
 
-tokens = (
+reserved = {
+    'numba':'TYPENUMBA',
+    'wurd' :'TYPEWURD'
+    'is'   :'IS'
+}
+
+tokens = [
     'NAME','NUMBA',
     'PLUS','MINUS','TIMES','DIVIDE','EQUALS',
-    'LPAREN','RPAREN', 'AND', 'WURD', 'TYPE', 'COM'
-    )
+    'LPAREN','RPAREN', 'AND', 'WURD'
+    ] + list(reserved.values())
 
 # Tokens
 
@@ -20,10 +26,10 @@ t_RPAREN  = r'\)'
 t_NAME    = r'[a-zA-Z_][a-zA-Z0-9_]*'   # r'[a-zA-Z_][a-zA-Z0-9_]*\!' solucion parche a diferenciacion entre nombre de variable y wurd
 t_AND     = r'\&'
 t_WURD    = r'[a-zA-Z_]+'
-t_TYPE    = r'(numba)|(wurd)'
+#t_TYPE    = r'(numba)|(wurd)'
 #t_GET     = r'get'
 #t_ANDD    = r'and'
-t_COM     = r'\''
+#t_COM     = r'\''
 
 def t_NUMBA(t):
     r'\d+'
@@ -65,10 +71,11 @@ names = { }
 
 def p_statement_declaration(t):  #NUEVO PARA HACER DIFERENCIA DE TIPO names[t[1]] = ["value","type"]
     'statement : NAME EQUALS TYPE'
-    #names[t[1]] = ["value",t[3]]
+    names[t[1]] = ["value",t[3]]
 
 def p_statement_assign(t):
-    'statement : NAME EQUALS expression'
+    '''statement : NAME EQUALS expression
+                 | NAME IS expression'''
     #names[t[1]][0] = t[3]
     names[t[1]] = t[3]
 
